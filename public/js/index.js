@@ -7,11 +7,19 @@ function age(){
     setTimeout(age, 3000)
 }
 
-var anElement = document.getElementById("app")
-anElement.innerHTML = "Hello World"
-anElement.innerHTML = "Hello World"
 
-var anElement = document.createElement("strong")
-anElement.innerHTML = "Hello World"
-var app = document.getElementById("app")
-app.appendChild
+
+function myFunction() {
+    var x = document.createElement("TABLE");
+    x.setAttribute("id", "myTable");
+    document.body.appendChild(x);
+  
+    var y = document.createElement("TR");
+    y.setAttribute("id", "myTr");
+    document.getElementById("myTable").appendChild(y);
+  
+    var z = document.createElement("TD");
+    var t = document.createTextNode("cell");
+    z.appendChild(t);
+    document.getElementById("myTr").appendChild(z);
+  }
