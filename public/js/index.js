@@ -9,7 +9,10 @@ function age(){
 
 
 
-function myFunction() {
+
+
+
+  function createCol() {
     var x = document.createElement("TABLE");
     x.setAttribute("id", "myTable");
     document.body.appendChild(x);
@@ -22,4 +25,20 @@ function myFunction() {
     var t = document.createTextNode("cell");
     z.appendChild(t);
     document.getElementById("myTr").appendChild(z);
+  }
+
+  function delRow() {
+    document.getElementById("myTable").deleteRow(0);
+  }
+
+  <button type="button" onclick="createRow()">newRow</button>
+  
+
+  function createRow() {
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    //var cell2 = row.insertCell(1);
+    cell1.innerHTML = "NEW";
+    //cell2.innerHTML = "NEW CELL2";
   }
