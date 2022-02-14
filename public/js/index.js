@@ -6,3 +6,5 @@ function age(){
     console.log("Aging game")
     setTimeout(age, 3000)
 }
+
+<button onClick="age()">Click me</button>
