@@ -8,11 +8,7 @@ function age(){
 }
 
 
-
-
-
-
-  function createCol() {
+function createCol() {
     var x = document.createElement("TABLE");
     x.setAttribute("id", "myTable");
     document.body.appendChild(x);
@@ -31,7 +27,7 @@ function age(){
     document.getElementById("myTable").deleteRow(0);
   }
 
-  <button type="button" onclick="createRow()">newRow</button>
+
   
 
   function createRow() {
