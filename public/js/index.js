@@ -1,9 +1,3 @@
-function createCell(){
-    var aCell = document.createElement("td")
-    aCell.innerHTML = content
-    return aCell;
-}
-
 function age(){
     var xhr = new XMLHttpRequest()
     xhr.open("GET", "/js/data.json")
@@ -30,4 +24,9 @@ function createRow(name, points){
     aRow.appendChild(createCell(name))
     aRow.appendChild(createCell(points))
     return aRow
+}
+function createCell(){
+    var aCell = document.createElement("td")
+    aCell.innerHTML = content
+    return aCell;
 }
