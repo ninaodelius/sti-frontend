@@ -3,6 +3,7 @@ function age(){
     xhr.open("GET", "/js/data.json")
     xhr.onload = function() {
         var data = JSON.parse(this.response)
+        console.log("jag kommer hit")
         createTable(data)
     }
     xhr.send()
@@ -25,7 +26,7 @@ function createRow(name, points){
     aRow.appendChild(createCell(points))
     return aRow
 }
-function createCell(){
+function createCell(content){
     var aCell = document.createElement("td")
     aCell.innerHTML = content
     return aCell;
