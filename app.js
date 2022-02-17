@@ -9,6 +9,16 @@ app.use('/healthcheck', require('./routes/healthcheck.routes'));
 app.use(express.static('public'))
 
 app.get('/', function(req, res){
+    //res.sendFile(__dirname + "/public/index.html")
+    res.sendFile(__dirname + "/public/html/startpage.html")
+})
+
+app.get('/bla', function(req, res){
+    //res.sendFile(__dirname + "/public/index.html")
+    res.sendFile(__dirname + "/public/html/startpage.html")
+})
+
+app.get('/football', function(req, res){
     res.sendFile(__dirname + "/public/index.html")
 })
 
