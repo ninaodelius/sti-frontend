@@ -2,7 +2,7 @@ age();
 
 function age(){
     var xhr = new XMLHttpRequest()
-    xhr.open("GET", "https://localhost:3001/football")
+    xhr.open("GET", "http://localhost:3001/football")
     // xhr.open("GET", "/js/data.json")
     xhr.onload = function() {
         var data = JSON.parse(this.response);
