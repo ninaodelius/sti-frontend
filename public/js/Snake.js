@@ -13,12 +13,13 @@ export default class Snake {
                 this.scene.game.config.height / 2,
                 this.tileSize,
                 this.tileSize,
-                0xff0000)
+                /*0xff0000*/0xfcabf7)
             .setOrigin(0)
         );
         this.apple = this.scene.add
         .rectangle(0, 0, this.tileSize, this.tileSize, 0x00ff00)
         .setOrigin(0);
+        //TODO change apple to actual img of apple
 
 
         this.positionApple();
