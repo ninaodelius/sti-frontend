@@ -1,5 +1,5 @@
 export default class Snake {
-    constructor(scene) {
+        constructor(scene) {
         this.scene = scene;
         this.lastMoveTime = 0;
         this.moveInterval = 100;
@@ -16,6 +16,7 @@ export default class Snake {
                 0xfcabf7)
             .setOrigin(0)
         );
+        this.score = 0;
         this.apple = this.scene.add
         .rectangle(0, 0, this.tileSize, this.tileSize, 0x9fdcbb)
         .setOrigin(0);
@@ -26,6 +27,8 @@ export default class Snake {
         scene.input.keyboard.on('keydown', e => {
             this.keydown(e);
         });
+
+
 
     }
     positionApple() {
@@ -60,6 +63,7 @@ export default class Snake {
             this.lastMoveTime = time;
             this.move();
         }
+
     }
     move(){
         let x = this.body[0].x + this.direction.x * this.tileSize;
@@ -73,6 +77,8 @@ export default class Snake {
                 .setOrigin(0)
             );
             this.positionApple();
+            this.score++;
+            console.log(this.score);
         }
 
         for (let index = this.body.length - 1; index > 0; index--) {
@@ -82,7 +88,6 @@ export default class Snake {
         
         this.body[0].x = x;
         this.body[0].y = y;
-
 
 
         //death by going off screen
