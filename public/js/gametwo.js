@@ -145,6 +145,7 @@ function draw() {
         else {
             lives--;
             if(!lives) {
+                //skicka score till backend
                 alert("GAME OVER");
                 document.location.reload();
                 
